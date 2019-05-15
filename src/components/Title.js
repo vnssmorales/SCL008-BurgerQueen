@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 
-class Products extends Component {
+class Title extends Component {
     render() {
         return  (
             <nav className="navbar navbar-dark bg-dark">
           <a href="" className = "text-white">
-          {this.props.tittle}
-            
+          {this.props.title}
           </a>
+          <button type="button" className="btn">Secondary</button>
+          
         </nav>
-        )
+        );
     }
 }
 
-export default Products;
+export default Title;
