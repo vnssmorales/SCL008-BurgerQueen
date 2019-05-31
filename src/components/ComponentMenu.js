@@ -7,9 +7,18 @@ class ComponentMenu extends Component {
       super();
       this.state = {
         menu
-      }
-    }
+      };
+
+    this.handleAddOrder = this.handleAddOrder.bind(this);
   
+    }
+
+    handleAddOrder(order) {
+       this.setState({
+           menu: [...this.state.menu, order]
+       })
+   }
+
     render() {
         const menu = this.state.menu;
             return menu.map((menus, index) => (
@@ -22,14 +31,15 @@ class ComponentMenu extends Component {
                 <h4>{menus.title}</h4>
                 </div>
                 </div>
+
                 <div className="card-body">
                 <ul>
                 {menus.options.map((option, index) => {
                             return <li key={`option_${index}`}>{option}</li>
                 })}                      
                 </ul>
-                
                 </div>
+                
                 </div>
                 </div>
                 </div>
@@ -37,5 +47,6 @@ class ComponentMenu extends Component {
             
     }   
 }
+
 
 export default ComponentMenu;
