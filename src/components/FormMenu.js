@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
 
-import { Grid, Row, Col } from 'react-flexbox-grid';
 import NameClient from './NameClient';
 
 class FormMenu extends Component {
@@ -35,9 +34,9 @@ class FormMenu extends Component {
 
                 <div className = "container">    
                 <div className= "row">
-                <div className="col-md-4">
-                <div className="card mt-4">           
-            <div className="card mt-4">
+                <div className="col-md-5">
+                <div className="card mt-5">           
+          
                 <form className="card-body" onSubmit= {this.handleSubmit}>
                     <NameClient inputname =  {this.props.inputname} /> 
                         <select
@@ -58,8 +57,7 @@ class FormMenu extends Component {
                             <option>Jugo natural: $7.00</option>
                         </select>
                 </form>
-                <Button btn= "Agregar al pedido"/>
-            </div>
+                <Button btn= "Agregar al pedido" id="btn_pedido" />
             </div>
             </div>
             </div>

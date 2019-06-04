@@ -6,7 +6,8 @@ import Header from './components/Header'
 import FormMenu from './components/FormMenu';
 import ComponentMenu from './components/ComponentMenu'
 import ContenidoMenu from './components/ContenidoMenu';
-import ProductBreakfast from './components/ProductBreakfast';
+import Menu from './components/Menu';
+
 
 class App extends Component {
 
@@ -14,17 +15,13 @@ class App extends Component {
 
     return (
       <div>
-
        <Header />
-       <ComponentMenu />
-   
-        <FormMenu onAddOrder = "pedido" />    
+       <Menu />  
        
       </div>
         
     );
   }
-
   
 }
 

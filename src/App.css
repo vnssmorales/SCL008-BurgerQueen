@@ -34,7 +34,7 @@ background-color: aliceblue;
 }
 
 .inputname {
-  height: 40px;
+  height: 80px;
   width: 180px;
   margin-bottom: 20px;
 }
@@ -47,10 +47,11 @@ background-color: aliceblue;
 
 .btn {
   height: 40px;
-  width: 170px;
+  width: 120px;
   background: #eed45e;
   margin-left: 15px;
 }
+
 
 .container_menu {
   margin-top: 20px;

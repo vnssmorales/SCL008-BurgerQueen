@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Header extends Component {
     render() {
         return (
 
-            <Grid fluid>
-                <Row>
-                    <Col xs={12} md={12} lg={12}>
-                    <div className="header">
-                        <h3>BURGER QUEEN</h3>
-                        {this.props.header}
-                    </div>
-                    </Col>
-                </Row>
-            </Grid >
 
-                    );
+            <div className="header">
+                <div className="navbar">
+                    <h2 className= "center">BURGER QUEEN</h2>
+                    {this.props.header}
+                </div>
+            </div>
+
+
+        );
     }
 
 }
