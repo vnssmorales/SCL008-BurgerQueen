@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 
 class Button extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -13,7 +13,7 @@ class Button extends Component {
 
     render() {
         return  ( 
-          <button type="button" className="btn" onClick= {this.handleClick}>{this.props.btn}</button>   
+          <button type="button" onClick= {this.handleClick}>{this.props.btnName}</button>   
         );
     }
 }

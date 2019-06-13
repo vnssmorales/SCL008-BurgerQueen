@@ -1,16 +1,56 @@
 import React, { Component } from 'react';
 import Button from './Button';
+import MenuBreakfast from './MenuBreakfast';
+import MenuLunchAndDinner from './MenuLunchAndDinner';
 
 class Menu extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state = {
+            showBreakfast: false,
+            showOthers: false,
+        }
+
+        this.showBreakfast = this.showBreakfast.bind(this);
+        this.showOthers = this.showOthers.bind(this);
     }
+
+    showBreakfast() {
+        this.setState({
+            ...this.state,
+            showBreakfast: true,
+            showOthers: false
+        })
+    }
+
+    showOthers() {
+        this.setState({
+            ...this.state,
+            showBreakfast: false,
+            showOthers: true
+        })
+    }
+
     render() {
-        return(
-    <div className= "menu-container">
-      <Button btn= "Desayuno" buttonOnClick={e => this.menuBurger('Desayuno', e)}/>
-      <Button btn= "Resto del día" />
-      </div>
+
+        return (
+
+                        <div className="menu-container">
+                            <Button btnName="Desayuno" id="btnDesayuno" buttonOnclick={this.showBreakfast} />
+                            <Button btnName="Resto del día" id="btnAlmuerzo" buttonOnclick={this.showOthers} />
+
+                            <div id="containerMenuBq">
+                                {
+                                    this.state.showBreakfast &&
+                                    <MenuBreakfast />
+                                }
+                                {
+                                    this.state.showOthers &&
+                                    <MenuLunchAndDinner />
+                                }
+                            </div>
+                        </div>
+            
         );
     }
 }

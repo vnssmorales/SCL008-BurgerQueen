@@ -3,11 +3,9 @@ import './App.css';
 
 //import ComponentMenu from './components/ComponentMenu';
 import Header from './components/Header'
-import FormMenu from './components/FormMenu';
-import ComponentMenu from './components/ComponentMenu'
-import ContenidoMenu from './components/ContenidoMenu';
 import Menu from './components/Menu';
 
+import Counter from './components/Counter';
 
 class App extends Component {
 
@@ -17,7 +15,7 @@ class App extends Component {
       <div>
        <Header />
        <Menu />  
-       
+           
       </div>
         
     );
