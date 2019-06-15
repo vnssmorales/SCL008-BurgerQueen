@@ -21,7 +21,9 @@ class MenuBreakfast extends Component {
             <Grid fluid>
                 <Row>
                     <Col xs={6} md={3}>
+                    <div id="productBreakfast">
                         {breakfast}
+                        </div>
                     </Col>
                 </Row>
             </Grid>

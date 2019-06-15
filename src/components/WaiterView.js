@@ -3,7 +3,7 @@ import Button from './Button';
 import MenuBreakfast from './MenuBreakfast';
 import MenuLunchAndDinner from './MenuLunchAndDinner';
 
-class Menu extends Component {
+class WaiterView extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,7 +39,7 @@ class Menu extends Component {
                             <Button btnName="Desayuno" id="btnDesayuno" buttonOnclick={this.showBreakfast} />
                             <Button btnName="Resto del día" id="btnAlmuerzo" buttonOnclick={this.showOthers} />
 
-                            <div id="containerMenuBq">
+                            <div id="containerOptions">
                                 {
                                     this.state.showBreakfast &&
                                     <MenuBreakfast />
@@ -55,5 +55,5 @@ class Menu extends Component {
     }
 }
 
-export default Menu;
+export default WaiterView;
 
