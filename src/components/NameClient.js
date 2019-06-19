@@ -1,35 +1,50 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'; //unir react y redux 
+import {clientName} from '../redux/actions/client'
 
 class NameClient extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClient = this.handleClient.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handleClient(e) {
+        e.preventDefault();
+        this.props.turnClient(this.getName.value)
     }
 
-    handleSubmit(event) {
-        alert('Bienvenido a BurgerQueen: ' + this.state.value);
-        event.preventDefault();
-    }
     render() {
         return (
             <div className = "inputname">
-                <form onSubmit = {this.handleSubmit}>
-                <label>
-                <input type ="text" placeholder= "¿Tu nombre es?" value = {this.state.value} onChange={this.handleChange}/>
-                </label>
+                <form onSubmit = {this.handleClient}>
+                <div className= "form-group">
+                <input type = "text" onChange = {this.props.onChange} className = "form-control" 
+                       name = "clientName" 
+                       ref= {(input) => this.getName = input} />
+               </div>
                 <input type = "submit" className = "enter" value = "Ingresar"/>
                 </form>
-                {this.props.inputname}
             </div>
         );
     }
 }
 
-export default NameClient;
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        turnClient: clientName(dispatch),
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    //recuperar estado
+    mapDispatchToProps
+    // enviar acciones
+)
+(NameClient);

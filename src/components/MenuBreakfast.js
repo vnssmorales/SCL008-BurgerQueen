@@ -23,7 +23,7 @@ class MenuBreakfast extends Component {
                     <Col xs={6} md={3}>
                     <div id="productBreakfast">
                         {breakfast}
-                        </div>
+                    </div>
                     </Col>
                 </Row>
             </Grid>
@@ -31,4 +31,4 @@ class MenuBreakfast extends Component {
     }
 }
 
-export default MenuBreakfast;
+export default (MenuBreakfast);

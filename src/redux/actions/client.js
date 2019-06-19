@@ -5,5 +5,4 @@ export const clientName = distpatch => (client) => {
         type: ADD_CLIENT,
         payload: client,
     })
-
 }
